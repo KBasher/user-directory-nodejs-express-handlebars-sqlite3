@@ -1,0 +1,17 @@
+<form id="formUpdateUser" name="updateuser" method="post" enctype="multipart/form-data" action="/updateuserdirectory/{{user.Id}}">
+    <h1>Update User</h1>
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input id="firstName" type="text" placeholder="firstname" name="firstName" value="{{user.FirstName}}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" type="text" placeholder="lastname" name="lastName" value="{{user.LastName}}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="uploadImage">Image:</label>
+      <input id="uploadImage" type="file" name="uploadImage">
+    </div>
+    <div class="form-group"><img id="imgDisplay" src="{{user.ImageUrl}}" class="img-circle imgSmall"></div>
+    <button id="btnSubmit" type="submit" class="button btn btn-large btn-success">Update</button>
+</form>

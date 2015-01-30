@@ -1,0 +1,14 @@
+
+<h1>User Directory</h1>
+    <div class="add"><a href="/adduserdirectory" class="button btn btn-large btn-success">Add New User</a></div>
+    {{#each userlist}}
+    <div class="row">
+      <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"><img id="imgDisplay" src="{{this.ImageUrl}}" class="img-circle imgSmall"></div>
+      <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"><a href="mailto:undefined" class="textLineHeight">{{this.FirstName}}</a></div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 textLineHeight"><a href="/updateuserdirectory/{{this.Id}}" class="button btn btn-large btn-success">Update</a></div>
+      <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2 textLineHeight">
+        <button id="btnSubmit" type="submit" onclick="DeleteUser('{{this.Id}}')" class="button btn btn-large btn-success">Delete</button>
+      </div>
+    </div>
+
+    {{/each}}
